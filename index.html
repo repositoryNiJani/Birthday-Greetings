@@ -6,6 +6,7 @@
   <script src="https://cdn.tailwindcss.com"></script> 
    <!-- Import Milkyway font -->
   <link href="https://fonts.cdnfonts.com/css/milkyway-3" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <title>BDAY | Login</title>
   
   <!-- Custom Tailwind configuration manual nalang muna-->
@@ -19,6 +20,7 @@
             'custom-black': '#2D2D2D',
             'custom-holder': '#A0A0A0',
             'custom-white': '#FFFFFF',
+            'custom-light-red': '#FCE8E9',
           },
           fontFamily: {
             'milkyway': ['Milkyway', 'sans-serif'],
@@ -26,66 +28,117 @@
           },
           borderRadius: {
             'custom-24': '24px',
+            'custom-16': '18px',
+            'custom-12': '16px'
           },
           boxShadow: {
             'custom': '0 6px 12px rgba(0, 0, 0, 0.15)',
+            'custom-light': '0 4px 8px rgba(0, 0, 0, 0.1)',
           },
           spacing: {
             '100px': '100px',
+          },
+         fontSize: {
+            '48px': '48px',
+            '36px': '36px',
+            '16px': '16px',
           }
         }
       }
     }
   </script>
 
-</head>
-<body class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-custom-bg font-segoe">
-  
-  <div class="container h-[550px] w-[800px] rounded-custom-24 mx-auto p-[25px] shadow-custom bg-custom-white">
-    
-    <!-- Header -->
-    <div class="text-center">
-      <h1 class="font-milkyway text-custom-red text-[48px] mb-0">WELCOME!</h1>
-      <!-- <p class="text-custom-holder m-0 p-0"></p> -->
+<!-- wag mo kakalimutan boi ah mobile - md[medium screen] - lg[large] -->
+ <!-- horizontal -  -->
+  <!-- vertical | -->
 
-    <!-- Form -->
-    <form class="px-100px py-5">
-      <!-- Username Field -->
-      <div class="mb-8">
-        <label class="block text-start text-custom-black font-bold mb-2">USERNAME</label>
-        <input 
-          type="text" 
-          placeholder="Enter username" 
-          class="border border-custom-holder p-5 w-full rounded-custom-24 mb-0 shadow-custom focus:border-custom-red focus:outline-none">
-      </div>
-      
-      <!-- Password Field -->
-      <div class="mb-8">
-        <label class="block text-start text-custom-black font-bold mb-2">PASSWORD</label>
-        <input 
-          type="password" 
-          placeholder="Enter password" 
-          class="border border-custom-holder p-5 w-full rounded-custom-24 mb-0 shadow-custom focus:border-custom-red focus:outline-none">
-      </div>
-      
-      <!-- Submit Button -->
-      <a href="color.html">
-        <button 
-        type="button"
-        class="w-full p-5 bg-custom-red rounded-custom-24 text-custom-white shadow-custom font-bold hover:bg-custom-white hover:border hover:border-custom-red hover:text-custom-red transition-all duration-300">
-        SUBMIT
-      </button>
-      </a>
-      
-      <!-- Footer Text -->
-      <p class="text-center mt-6 text-custom-holder">
-        Don't have an account? 
-        <span class="text-custom-red font-bold cursor-pointer">CONTACT ME!</span>
-      </p>
-    </form>
-    
+</head>
+
+<!-- set the login container in the center of the screen -->
+<body class="min-h-screen flex justify-center items-center bg-custom-bg font-segoe p-4 md:p-6">
+ 
+  <!-- log in form -->
+  <div class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
+  rounded-custom-24 md:rounded-custom-24 
+  shadow-custom 
+  bg-custom-white 
+  p-6 md:p-8 lg:p-10 xl:p-[25px]
+  mx-4 md:mx-8 lg:mx-10">
+   
+  <!-- header  -->
+    <div class="text-center mb-2 md:mb-4 lg:mb-6">
+      <h1 class="text-custom-red text-[48px] font-milkyway">WELCOME!</h1>
     </div>
 
+    <!-- form  -->
+      <form action="" class="px-6 md:px-8 lg:px-10 xl:px-[100px]
+      py-2 md:py-2 lg:py-2 xl:py-2">
+        
+        <!-- username -->
+        <div class="mb-4 md:mb-6">
+          <label for="" class="text-custom-black block mb-2 font-bold text-16px md:text-base">USERNAME</label>
+          <input type="text" class="border border-custom-holder 
+          rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24 
+          p-4 md:p-4 lg:p-6 
+          w-full
+          shadow-custom-light md:shadow-custom
+          hover:border-custom-red
+          transition-all duration-300
+          focus:border-custom-red focus:outline-none
+          focus:ring-2 focus:ring-custom-light-red
+          text-sm md:text-base" placeholder="Enter username">
+        </div>
+
+        <!-- password  -->
+         <div class="mb-4 md:mb-6">
+          <label for="" class="text-custom-black block mb-2 font-bold text-16px md:text-base">PASSWORD</label>
+          <input type="password" class="border border-custom-holder 
+          rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24 
+          p-4 md:p-4 lg:p-6 
+          w-full
+          shadow-custom-light md:shadow-custom
+          hover:border-custom-red
+          transition-all duration-300
+          focus:border-custom-red focus:outline-none
+          focus:ring-2 focus:ring-custom-light-red
+          text-sm md:text-base" placeholder="Enter password">
+        </div>
+
+        <!-- submit button -->
+        <a href="color.html" class="block">
+          <button type="button" class="w-full bg-custom-red 
+        rounded-custom-12 md:rounded-custom-16 lg:custom-24
+        mt-2 md:mt-2 lg:mt:2
+        p-4 md:p-4 lg:p-6
+        text-sm md:text-base
+        font-bold
+        text-custom-white
+        hover:text-custom-red hover:bg-custom-white hover:border border-custom-red
+        transition-all duration-300
+        shadow-custom-light md:shadow-custom">
+          SUBMIT
+        </button>
+        </a>
+
+        <!-- contact me boi -->
+         <p class="text-center text-custom-holder text-sm md:text-base mt-4">Dont have an account?
+          <a href="" class="text-custom-red font-bold hover:underline decoration-solid">CONTACT ME!</a>
+         </p>
+
+      </form>
+
   </div>
+ 
+ <!-- help  -->
+       <div>
+        <i class='bx bx-question-mark text-[90px]
+        bg-custom-red rounded-[500px] text-custom-white
+        z-50
+        absolute right-[20px] bottom-[20px]
+        transition-all duration-300
+        hover:bg-custom-white hover:text-custom-red hover:border border-custom-red
+        active:scale-[0.98]'></i>
+       </div>
+
 </body>
 </html>

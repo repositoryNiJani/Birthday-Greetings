@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.cdnfonts.com/css/milkyway-3');
 
+/* hinde nagana naka script sa loob kaso diren nagana ung config kasi tw4 gamit aray ko */
 :root {
   /* fonts */
  --milkyway: 'Milkyway', sans-serif;;
@@ -25,3 +26,12 @@
       border-color: #E63946 !important;
       outline: none !important;
     }
+
+@media (max-width: 768px) {
+
+  .container {
+    background-color: red;
+    color: red;
+  }
+
+ }

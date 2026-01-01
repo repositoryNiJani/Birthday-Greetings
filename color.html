@@ -20,6 +20,7 @@
             'custom-black': '#2D2D2D',
             'custom-holder': '#A0A0A0',
             'custom-white': '#FFFFFF',
+            'custom-light-red': '#FCE8E9',
           },
           fontFamily: {
             'milkyway': ['Milkyway', 'sans-serif'],
@@ -27,35 +28,57 @@
           },
           borderRadius: {
             'custom-24': '24px',
+            'custom-16': '18px',
+            'custom-12': '16px'
           },
           boxShadow: {
             'custom': '0 6px 12px rgba(0, 0, 0, 0.15)',
+            'custom-light': '0 4px 8px rgba(0, 0, 0, 0.1)',
           },
           spacing: {
             '100px': '100px',
+          },
+         fontSize: {
+            '48px': '48px',
+            '36px': '36px',
+            '16px': '16px',
           }
         }
       }
     }
   </script>
 
-</head>
-<body class="fixed top-0 left-0 flex justify-center items-center w-full h-full bg-custom-bg font-segoe">
-  
-  <div class="container h-[550px] w-[800px] rounded-custom-24 mx-auto p-[25px] shadow-custom bg-custom-white">
-    
-    <!-- Header -->
-    <div>
-      <h1 class=" text-custom-red text-[48px] ml-4">
-        <i class='bx  bxs-palette'><span class="font-milkyway">COLOR</span>
-        </i> 
-        </h1>
-      <!-- <p class="text-custom-holder m-0 p-0"></p> -->
+<!-- wag mo kakalimutan boi ah mobile - md[medium screen] - lg[large] -->
+ <!-- horizontal -  -->
+  <!-- vertical | -->
 
-    <!-- 404 message -->
-     <div class="text-center justify-center items-center">
+</head>
+
+<!-- set the login container in the center of the screen -->
+<body class="min-h-screen flex justify-center items-center bg-custom-bg font-segoe p-4 md:p-6">
+ 
+  <!-- log in form -->
+  <div class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
+  rounded-custom-24 md:rounded-custom-24 
+  shadow-custom 
+  bg-custom-white 
+  p-6 md:p-8 lg:p-10 xl:p-[25px]
+  mx-4 md:mx-8 lg:mx-10">
+   
+  <!-- header  -->
+     <div class="text-start mb-2 md:mb-4 lg:mb-6
+     ml-2 md:ml-4 lg:md-4">
+      <h1 class="text-custom-red text-[48px] font-milkyway">
+         <i class='bx  bxs-palette'><span class="font-milkyway">COLOR</span>
+        </i> 
+      </h1>
+    </div>
+
+     <!-- 404 message -->
+     <div class="text-center justify-center items-center ">
         <img class="m-auto w-[600px]" src="public/404.png" alt="404">
-        <p class="text-custom-holder">Image yan kaya malabo wag kana magreklamo pagod nako
+        <p class="text-custom-holder 
+         text-sm md:text-base">Image yan kaya malabo wag kana magreklamo pagod nako
             <br>
             -jani
         </p>
@@ -70,8 +93,19 @@
       </button>
       </a>
     
-    </div>
 
   </div>
+ 
+ <!-- help  -->
+       <div>
+        <i class='bx bx-question-mark text-[90px]
+        bg-custom-red rounded-[500px] text-custom-white
+        z-50
+        absolute right-[20px] bottom-[20px]
+        transition-all duration-300
+        hover:bg-custom-white hover:text-custom-red hover:border border-custom-red
+        active:scale-[0.98]'></i>
+       </div>
+
 </body>
 </html>
