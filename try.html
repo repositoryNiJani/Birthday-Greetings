@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script> 
-
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/style.css">
+   
 </head>
 <body>
-   <!-- 404 message -->
-     <div class="text-center justify-center items-center">
+    <!-- Overlay for transition -->
+    <div id="transitionOverlay" class="transition-overlay"></div>
+    
+    <!-- 404 message -->
+    <div  id="pageContent"  >
+
+       <div class="text-center justify-center items-center">
         <img class="m-auto w-[600px]" src="public/404.png" alt="404">
         <p class="text-custom-holder">Image yan kaya malabo wag kana magreklamo pagod nako
             <br>
@@ -26,20 +31,8 @@
       </button>
       </a>
 
-<div class="group relative inline-block">
-  <!-- Hover trigger -->
-  <button class="px-4 py-2 bg-blue-500 text-white rounded">
-    Hover me
-  </button>
-  
-  <!-- Tooltip that shows on hover -->
-  <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2
-              bg-gray-900 text-white text-sm rounded py-1 px-2
-              opacity-0 group-hover:opacity-100 transition-opacity duration-300
-              whitespace-nowrap">
-    This is the tooltip text
-  </div>
-</div>
-
+      </div>
+    
+ <script src="src/fade.js"></script>
 </body>
 </html>

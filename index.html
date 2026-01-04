@@ -7,6 +7,7 @@
    <!-- Import Milkyway font -->
   <link href="https://fonts.cdnfonts.com/css/milkyway-3" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="src/style.css">
   <title>BDAY | Login</title>
   
   <!-- Custom Tailwind configuration manual nalang muna-->
@@ -56,9 +57,12 @@
 
 <!-- set the login container in the center of the screen -->
 <body class="min-h-screen flex justify-center items-center bg-custom-bg font-segoe p-4 md:p-6">
+
+  <!-- overlay transition  -->
+  <div id="transitionOverlay" class="transition-overlay"></div>
  
   <!-- log in form -->
-  <div class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
+  <div id="pageContent" class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
   rounded-custom-24 md:rounded-custom-24 
   shadow-custom 
   bg-custom-white 
@@ -131,15 +135,26 @@
   </div>
  
  <!-- help  -->
-       <div>
-        <i class='bx bx-question-mark text-[90px]
-        bg-custom-red rounded-[500px] text-custom-white
-        z-50
-        absolute right-[20px] bottom-[20px]
-        transition-all duration-300
-        hover:bg-custom-white hover:text-custom-red hover:border border-custom-red
-        active:scale-[1]'></i>
-       </div>
+       <button class="fixed 
+       right-[8px] md:right-[15px] lg:right-[20px]
+       bottom-[10px]  md:bottom-[15px] lg:bottom-[20px]
+       z-[100] 
+              w-[80px] h-[80px] rounded-full
+              bg-custom-red text-custom-white
+              flex items-center justify-center
+              shadow-lg hover:shadow-xl
+              cursor-pointer
+              transition-all duration-300
+              hover:bg-custom-white hover:text-custom-red
+              border-2 border-transparent hover:border-custom-red
+              active:scale-[0.98]
+              focus:outline-none focus:ring-4 focus:ring-custom-red focus:ring-opacity-50
+              font-milkyway
+              text-48px"
+        aria-label="Help">
+    ?
+</button>
 
+ <script src="src/fade.js"></script>
 </body>
 </html>
