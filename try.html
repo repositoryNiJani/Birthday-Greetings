@@ -1,20 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="src/style.css">
-   
-</head>
-<body>
-    <!-- Overlay for transition -->
-    <div id="transitionOverlay" class="transition-overlay"></div>
-    
-    <!-- 404 message -->
-    <div  id="pageContent"  >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script> 
+   <!-- Import Milkyway font -->
+  <link href="https://fonts.cdnfonts.com/css/milkyway-3" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="src/style.css">
+  <title>BDAY | Login</title>
+  
+  <!-- Custom Tailwind configuration manual nalang muna-->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'custom-bg': '#F8F9FA',
+            'custom-red': '#E63946',
+            'custom-black': '#2D2D2D',
+            'custom-holder': '#A0A0A0',
+            'custom-white': '#FFFFFF',
+            'custom-light-red': '#FCE8E9',
+          },
+          fontFamily: {
+            'milkyway': ['Milkyway', 'sans-serif'],
+            'segoe': ['Segoe UI', 'sans-serif'],
+          },
+          borderRadius: {
+            'custom-24': '24px',
+            'custom-16': '18px',
+            'custom-12': '16px'
+          },
+          boxShadow: {
+            'custom': '0 6px 12px rgba(0, 0, 0, 0.15)',
+            'custom-light': '0 4px 8px rgba(0, 0, 0, 0.1)',
+          },
+          spacing: {
+            '100px': '100px',
+          },
+         fontSize: {
+            '48px': '48px',
+            '36px': '36px',
+            '16px': '16px',
+          }
+        }
+      }
+    }
+  </script>
 
-       <div class="text-center justify-center items-center">
+<!-- wag mo kakalimutan boi ah mobile - md[medium screen] - lg[large] -->
+ <!-- horizontal -  -->
+  <!-- vertical | -->
+
+</head>
+
+<!-- set the login container in the center of the screen -->
+<body class="min-h-screen flex justify-center items-center bg-custom-bg font-segoe p-4 md:p-6">
+
+  <!-- overlay transition  -->
+  <div id="transitionOverlay" class="transition-overlay"></div>
+ 
+  <!-- log in form -->
+  <div id="pageContent" class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
+  rounded-custom-24 md:rounded-custom-24 
+  shadow-custom 
+  bg-custom-white 
+  p-6 md:p-8 lg:p-10 xl:p-[25px]
+  mx-4 md:mx-8 lg:mx-10">
+   
+  <!-- header  -->
+    <div class="text-center mb-2 md:mb-4 lg:mb-6">
+      <!-- <h1 class="text-custom-red text-[48px] font-milkyway">WELCOME!</h1> -->
+    </div>
+
+    <!-- 404  -->
+     <div class="text-center justify-center items-center">
         <img class="m-auto w-[600px]" src="public/404.png" alt="404">
         <p class="text-custom-holder">Image yan kaya malabo wag kana magreklamo pagod nako
             <br>
@@ -31,8 +92,30 @@
       </button>
       </a>
 
-      </div>
-    
+
+  </div>
+ 
+ <!-- help  -->
+       <button class="fixed 
+       right-[8px] md:right-[15px] lg:right-[20px]
+       bottom-[10px]  md:bottom-[15px] lg:bottom-[20px]
+       z-[100] 
+              w-[80px] h-[80px] rounded-full
+              bg-custom-red text-custom-white
+              flex items-center justify-center
+              shadow-lg hover:shadow-xl
+              cursor-pointer
+              transition-all duration-300
+              hover:bg-custom-white hover:text-custom-red
+              border-2 border-transparent hover:border-custom-red
+              active:scale-[0.98]
+              focus:outline-none focus:ring-4 focus:ring-custom-red focus:ring-opacity-50
+              font-milkyway
+              text-48px"
+        aria-label="Help">
+    ?
+</button>
+
  <script src="src/fade.js"></script>
 </body>
 </html>
