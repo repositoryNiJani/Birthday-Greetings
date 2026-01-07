@@ -7,8 +7,7 @@
    <!-- Import Milkyway font -->
   <link href="https://fonts.cdnfonts.com/css/milkyway-3" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="src/style.css">
-  <title>BDAY | Login</title>
+  <title>BDAY | Season</title>
   
   <!-- Custom Tailwind configuration manual nalang muna-->
   <script>
@@ -21,6 +20,18 @@
             'custom-black': '#2D2D2D',
             'custom-holder': '#A0A0A0',
             'custom-white': '#FFFFFF',
+            'custom-yellow': '#FFD700',
+            'custom-blue': '#0077FF',
+            'custom-green': '#00CC00',
+            'custom-orange': '#FF6600',
+            'custom-purple': '#AA00FF',
+            'custom-choco': '#8D5524',
+            'custom-mocha': '#7D5D3B',
+            'custom-macha': '#6B8E23',
+            'custom-summer': '#FFB347',
+            'custom-spring': '#FFB7C5',
+            'custom-fall': '#556B2F',
+            'custom-winter': '#6C8EBF',
             'custom-light-red': '#FCE8E9',
           },
           fontFamily: {
@@ -57,12 +68,9 @@
 
 <!-- set the login container in the center of the screen -->
 <body class="min-h-screen flex justify-center items-center bg-custom-bg font-segoe p-4 md:p-6">
-
-  <!-- overlay transition  -->
-  <div id="transitionOverlay" class="transition-overlay"></div>
  
   <!-- log in form -->
-  <div id="pageContent" class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
+  <div class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
   rounded-custom-24 md:rounded-custom-24 
   shadow-custom 
   bg-custom-white 
@@ -70,28 +78,81 @@
   mx-4 md:mx-8 lg:mx-10">
    
   <!-- header  -->
-    <div class="text-center mb-2 md:mb-4 lg:mb-6">
-      <!-- <h1 class="text-custom-red text-[48px] font-milkyway">WELCOME!</h1> -->
+     <div class="mb-2 md:mb-4 lg:mb-4
+     mx-2 md:mx-4 lg:mx-4
+     flex justify-between items-center mb-2 md:mb-4 lg:mb-6 px-2 md:px-4">
+      <h1 class="text-custom-red text-[48px] font-milkyway">
+      <i class='bx  bxs-gift'><span class="font-milkyway sm:text-center">GIFT</span>
+        </i> 
+      </h1>
+
+      <!-- <div class="relative">
+        <i class="bx bxs-bell w-[60px] h-[60px] rounded-full
+              bg-custom-red text-custom-white
+              flex items-center justify-center
+              text-[32px]
+              transition-all duration-300
+              hover:bg-custom-white hover:text-custom-red hover:border border-custom-red"></i>
+      </div> -->
     </div>
 
-    <!-- 404  -->
-     <div class="text-center justify-center items-center">
-        <img class="m-auto w-[600px]" src="public/404.png" alt="404">
-        <p class="text-custom-holder">Image yan kaya malabo wag kana magreklamo pagod nako
-            <br>
-            -jani
-        </p>
+    <!-- season  -->
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-4
+     px-2 md:px-6 lg:px-8">
+
+      <!-- gift  -->
+        <!-- form  -->
+      <form action="" class="px-2 md:px-4 lg:px-6 xl:px-[100px]
+      py-2 md:py-2 lg:py-2 xl:py-2">
+        
+      <!-- gift image -->
+       <div class="justify-center items-center">
+        <img src="public/img/gift.gif" alt="gift" class="h-[150px] w-[150px] m-auto">
+       </div>
+
+        <!-- username -->
+        <div class="mb-4 md:mb-6">
+          <label for="" class="text-custom-black block mb-2 font-bold text-16px md:text-base">WHAT DO YOU WANT?</label>
+          <input type="text" class="border border-custom-holder 
+          rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24 
+          p-4 md:p-4 lg:p-6 
+          w-full
+          shadow-custom-light md:shadow-custom
+          hover:border-custom-red
+          transition-all duration-300
+          focus:border-custom-red focus:outline-none
+          focus:ring-2 focus:ring-custom-light-red
+          text-sm md:text-base" placeholder="Your imagination is the limit!">
+        </div>
+
+
      </div>
 
-     <!-- balik -->
-     <a href="index.html">
-        <button 
-        type="button"
-        class="w-[120px] p-5 bg-custom-red rounded-custom-24 text-custom-white shadow-custom font-bold hover:bg-custom-white hover:border hover:border-custom-red hover:text-custom-red transition-all duration-300">
-        <i class='bx bxs-left-arrow-alt text-[20px]'><span class="font-milkyway">BACK</span></i>
-      </button>
-      </a>
+       <!-- submit button -->
+      <div class="m-auto col-span-2 lg:col-span-3 
+              mx-auto max-w-[500px] 
+              mt-4 md:mt-4 lg:mt:10">
+          <a href="profile.html" class="block">
+          <button type="button" class="w-full bg-custom-red 
+        rounded-custom-12 md:rounded-custom-16 lg:custom-24
+        p-4 md:p-4 lg:p-4
+        text-[20px] 
+        font-bold
+        text-custom-white
+        hover:text-custom-red hover:bg-custom-white hover:border border-custom-red
+        transition-all duration-300
+        shadow-custom-light md:shadow-custom
+        font-milkyway">
+          CONTINUE
+        </button>
+        </a>
+      </div>
 
+      <p class="text-custom-holder text-center
+      mt-4 md:mt-4 lg:mt:6">What gift do you want?</p>
+
+       </form>
+    
 
   </div>
  
@@ -115,7 +176,7 @@
         aria-label="Help">
     ?
 </button>
+       
 
- <script src="src/fade.js"></script>
 </body>
 </html>
