@@ -77,3 +77,23 @@
             transform: translateY(100%);
             transition: transform 0.5s ease;
         }
+ .modal-content {
+        animation: modalFadeIn 0.3s ease-out;
+        margin: auto;
+        margin-top: 100px;
+      }
+      
+      @keyframes modalFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+       .z-50 {
+        z-index: 50;
+       }
