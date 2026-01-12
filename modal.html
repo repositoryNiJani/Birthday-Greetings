@@ -3,30 +3,36 @@
   <div class="fixed inset-0 bg-black bg-opacity-50" id="modalBackdrop"></div>
   
   <div class="fixed inset-0 flex items-center justify-center p-4">
-    <div class="modal-content bg-white rounded-lg shadow-xl w-full max-w-[90vw] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 
-              min-w-[300px] md:min-w-[700px] min-h-[300px] md:min-h-[600px] max-h-[90vh] overflow-y-auto">
-      
+    <div class="modal-content bg-white rounded-lg w-full max-w-[90vw] sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl 
+              min-w-[300px] md:min-w-[500px] min-h-[300px] md:min-h-[400px] max-h-[90vh] overflow-y-auto">
+
       <!-- Modal Body -->
-      <div class="p-6">
-        <!-- Profile Section -->
-        <div class="profile flex flex-col gap-6 p-6 bg-gray-50 rounded-lg mb-8">
-
-              <!-- Close Button -->
-      <div class="flex justify-end p-4">
-        <button onclick="closeSharedModal.close()"  class="text-gray-500 hover:text-gray-700 text-2xl">
-          &times;
-        </button>
-      </div>
-
-          <img src="public/img/thankyou.gif" alt="Thank You" class="w-32 h-32 md:w-48 md:h-48">
-          <p class="font-milkyway text-custom-red text-center text-lg md:text-xl">
+      <div class="p-4 md:p-6">
+        <!-- Content Section -->
+        <div class="flex flex-col items-center gap-6 p-4 bg-gray-50 rounded-lg">
+          <!-- Thank You Image -->
+          <div class="flex justify-center items-center">
+            <img src="public/img/thankyou.gif" alt="Thank You" class="w-32 h-32 md:w-48 md:h-48 object-contain">
+          </div>
+          
+          <!-- Thank You Text -->
+          <p class="font-milkyway text-custom-red text-center text-[32px] md:text-[40px] leading-tight">
             THANK YOU FOR USING MY PROJECT!
+            <span class="flex justify-center items-center text-custom-holder text-[15px] font-segoe">I really appriciated it!</span>
           </p>
+          
+          <!-- Close Button (Center) -->
+          <div class="flex justify-center items-center mt-2">
+            <a href="final.html">
+              <button class="bg-custom-red py-3 px-8 rounded-custom-16
+              font-milkyway text-custom-white text-lg md:text-xl
+              hover:bg-custom-white hover:border-2 hover:border-custom-red hover:text-custom-red
+              transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-custom-red focus:ring-opacity-50">
+              CLOSE
+            </button>
+            </a>
+          </div>
         </div>
-        
-        <!-- Additional content can be dynamically inserted here -->
-        <div id="modalDynamicContent" class="mt-6"></div>
-        
       </div>
     </div>
   </div>

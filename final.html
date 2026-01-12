@@ -69,9 +69,12 @@
 
 <!-- set the login container in the center of the screen -->
 <body class="min-h-screen flex justify-center items-center bg-custom-bg font-segoe p-4 md:p-6">
+
+  <!-- overlay transition  -->
+  <div id="transitionOverlay" class="transition-overlay"></div>
  
   <!-- log in form -->
-  <div class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
+  <div id="pageContent" class="w-full max-w-[550px] md:max-w-[650px] lg:max-w-[750px] xl:max-w-[800px]
   rounded-custom-24 md:rounded-custom-24 
   shadow-custom 
   bg-custom-white 
@@ -144,7 +147,7 @@
              <div class="bg-custom-bg flex justify-center items-center
             rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24
             h-[120px] md:h-[130px] lg:h-[120px]
-             hover:scale-105 hover:shadow-custom
+             
            transition-all
            duration-300">
                 <div class="bg-custom-holder text-custom-white rounded-[100%] 
@@ -161,7 +164,7 @@
              <div class="bg-custom-bg flex justify-center items-center
             rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24
             h-[120px] md:h-[130px] lg:h-[120px]
-             hover:scale-105 hover:shadow-custom
+            
            transition-all
            duration-300">
                 <img src="public/img/rose.png" class="bg-custom-holder text-custom-white rounded-[100%] 
@@ -177,7 +180,7 @@
              <div class="bg-custom-bg flex justify-center items-center
             rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24
             h-[120px] md:h-[130px] lg:h-[120px]
-             hover:scale-105 hover:shadow-custom
+          
            transition-all
            duration-300">
                 <img src="public/img/choco.png" class="bg-custom-holder text-custom-white rounded-[100%] 
@@ -194,7 +197,7 @@
              <div class="bg-custom-bg flex justify-center items-center
             rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24
             h-[120px] md:h-[130px] lg:h-[120px]
-             hover:scale-105 hover:shadow-custom
+            
            transition-all
            duration-300">
                 <img src="public/img/spring.png" class="bg-custom-holder text-custom-white rounded-[100%] 
@@ -210,7 +213,7 @@
              <div class="bg-custom-bg flex justify-center items-center
             rounded-custom-12 md:rounded-custom-16 lg:rounded-custom-24
             h-[120px] md:h-[130px] lg:h-[120px]
-             hover:scale-105 hover:shadow-custom
+            
            transition-all
            duration-300">
                 <div class="bg-custom-holder text-custom-white rounded-[100%] 
@@ -228,7 +231,10 @@
 
 
       <p class="text-custom-holder text-center
-      mt-4 md:mt-4 lg:mt:6">Thank you for trying my personal project!</p>
+      mt-4 md:mt-4 lg:mt:6">Thank you for trying my personal project!
+    <a href="index.html">
+      <span class="text-custom-red font-bold hover:underline decoration-solid">SIGN OUT</span>
+    </a></p>
     
 
   </div>
@@ -255,9 +261,6 @@
     ?
 </button>
        
-<!-- <div id="modalContainer"></div>
-
-
-<script src="src/notif.js"></script> -->
+<script src="src/fade.js"></script>
 </body>
 </html>
